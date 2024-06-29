@@ -1,0 +1,22 @@
+{% extends "books/base.html" %}
+{% block title %}books/index{% endblock %}
+
+{% block content %}
+<h1>books/index</h1>
+<table>
+  <thead>
+      <th>ID</th>
+      <th>タイトル</th>
+      <th>body</th>
+  </thead>
+  <tbody>
+    {% for obj in books_list %}
+    <tr>
+      <td>{{ obj.id }}</td>
+      <td>{{ obj.title }}</td>
+      <td>{{ obj.content }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
